@@ -35,8 +35,11 @@ def player_menu():
             print(get_player_stats(username))
         elif choice == 2:
             username = input('what is the username of the player you want to find ')
-            gamemode = input('what gamemode would you like to get a summary for (casual or competitive)')
-            print(get_player_summary(username, gamemode))
+            print(get_player_summary(username,))
+        elif choice == 3:
+            username = input('what is the username of the player you want to find ')
+            gamemode = input('what gamemode would you like stats for? (competitive or casual)')
+            print(get_stats_summary(username, gamemode))
 
 def print_player_menu():
     print('\n=== Overwatch Stats ===')
@@ -44,6 +47,7 @@ def print_player_menu():
     print("0. Main Menu")
     print('1. find players stats')
     print('2. get players summary')
+    print('3. get stats summary')
 
 def overwatch_menu():
     print_overwatch_menu()
@@ -62,7 +66,7 @@ def overwatch_menu():
         elif choice == 4:
             print(gamemodes())
         elif choice == 5:
-            print(maps())
+            maps()
         else:
             print('not a valid input.')
 
