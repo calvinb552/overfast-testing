@@ -29,9 +29,11 @@ def player_menu():
         if choice == 0:
             break
         elif choice == 1:
-            print('finding player stats')
+            username = input('what is the username of the player you want to find ')
+            print(get_player_stats(username))
         elif choice == 2:
-            print("finding player summary")
+            username = input('what is the username of the player you want to find ')
+            print(get_player_summary(username))
 
 def print_player_menu():
     print('\n=== Overwatch Stats ===')
@@ -39,5 +41,3 @@ def print_player_menu():
     print("0. Main Menu")
     print('1. find players stats')
     print('2. get players summary')
-
-menu()

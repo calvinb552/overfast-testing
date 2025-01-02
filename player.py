@@ -23,7 +23,7 @@ def get_player_summary(username):
     player_id = get_player(username)
     summary_url = 'https://overfast-api.tekrop.fr/players/'+ player_id +'/stats/summary'
     response = requests.get(summary_url)
-    return(response)
+    return(response.json())
 
 def get_stats_summary(username, gamemode):
     player_id = get_player(username)

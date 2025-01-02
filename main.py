@@ -1,8 +1,8 @@
-
+from menu import menu
 
 
 def main():
-    return 0
+    menu()
 
 if __name__ == '__main__':
     main()
